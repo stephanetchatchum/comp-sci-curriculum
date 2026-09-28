@@ -1,0 +1,11 @@
+# Core scientific stack — installed for every stage from day one.
+# Pin major versions so a project you finish today still runs the same
+# way in six months; bump deliberately, not by accident.
+numpy==2.1.*
+scipy==1.14.*
+matplotlib==3.9.*
+pandas==2.2.*
+requests==2.32.*
+pytest==8.3.*
+
+# Stage 1 needs Git itself (system package, not pip) — see SETUP.md.

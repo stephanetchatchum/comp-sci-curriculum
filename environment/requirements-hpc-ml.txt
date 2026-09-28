@@ -1,0 +1,14 @@
+# Install these once you actually reach Stage 5 (`pip install -r environment/requirements-hpc-ml.txt`).
+# Keeping them out of requirements-core.txt means Stage 0-4 setup stays
+# fast and doesn't drag in compiler toolchains you don't need yet.
+
+numba==0.60.*          # JIT compilation, and the CUDA target if you have an accessible GPU
+scikit-learn==1.5.*    # surrogate models, crop-yield prediction (s5p4, s5p5)
+networkx==3.3.*         # already used earlier (s2p5, s4p3) but pinned here for HPC-stage graph work
+xarray==2024.9.*        # s4p5 satellite reanalysis data
+mpi4py==4.0.*           # only if you set up an MPI implementation locally (optional path for s5p2)
+
+# rasterio/GDAL (s5p6) and Cartopy (s4p5) are notoriously fussy to pip-install
+# because they wrap system C libraries (GDAL, PROJ, GEOS). When you reach
+# those specific projects, install via conda/mamba instead if pip fails:
+#   conda install -c conda-forge rasterio cartopy gdal

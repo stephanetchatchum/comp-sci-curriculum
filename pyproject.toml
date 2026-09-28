@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comp-sci-common"
+version = "0.1.0"
+description = "Shared numerical/plotting/validation toolkit built up across the curriculum"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["common"]
+
+[tool.pytest.ini_options]
+# Run `pytest` from the repo root and it will discover tests in every
+# stage folder AND in common/, using the same config everywhere.
+testpaths = ["common", "stage0-computational-foundations", "stage1-scientific-programming",
+             "stage2-mathematical-computing", "stage3-numerical-methods-dynamical-modeling",
+             "stage4-scientific-simulation-pdes", "stage5-advanced-computing-hpc",
+             "stage6-research-preparation", "stage7-capstone"]
+python_files = "test_*.py"
+addopts = "-ra --tb=short"

@@ -1,0 +1,42 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Data & generated output ---
+# Rule of thumb: raw/large/downloaded data and generated results are NOT
+# committed by default. If a specific small file (e.g. a reference CSV
+# under a few hundred KB used by tests) needs to be tracked, force-add it
+# explicitly with `git add -f path/to/file`, don't loosen this rule globally.
+data/*
+!data/.gitkeep
+results/*
+!results/.gitkeep
+
+# --- Jupyter ---
+*.ipynb_checkpoints
+
+# --- Large binary / compiled artifacts (Stage 5 C++/CUDA/Numba) ---
+*.so
+*.o
+*.out
+*.pyd
+__pycache__/
+.numba_cache/
