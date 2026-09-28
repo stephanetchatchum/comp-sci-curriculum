@@ -10,6 +10,8 @@
      can't state it without looking at the tracker, you don't understand
      it yet — that's a signal to re-read, not to start coding. -->
 
+I am building a CLI tool that will do 2 jobs, Convert and COmbine, Convert will be handle the conversion of the value and uncertainties into different units of the same family, while combine will be able do simple operations on the values and uncertainties of units of the same family. The different families are Length, Time, Energy, and temperature. Temperature is a family that behaves different from the rest as its conversion uses special formulas. 
+
 ## Approach
 
 <!-- The method(s) you're using and why, e.g. "Bisection guarantees
